@@ -98,7 +98,7 @@ num_employees = len(employees)
 Write some code that creates a range based on what the user enters. 
 Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the user to pick any of these options?
 '''
-# ASK USER TO CHOOSE PARAMETERS
+# ASK USER TO CHOOSE PARAMETERS:
 
 # while True:
     # num_count = input("Enter the number of values for the range (1, 2, or 3): ")
@@ -108,7 +108,7 @@ Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the
     # else:
         # print("Invalid input. Please enter 1, 2, or 3 only.")
 
-# GET NUMBERS FROM USERS, BASED ON THEIR CHOICE
+# GET NUMBERS FROM USERS, BASED ON THEIR CHOICE:
 
 # if num_count == 1:
     # num1 = int(input("Enter the number for the range: "))
