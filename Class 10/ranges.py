@@ -88,13 +88,41 @@ num_employees = len(employees)
 
 # Iterate through each index
 
-for i in range(num_employees):
-    employee = employees[i]
-    job_title = job_titles[i]
-    print(f"{employee}'s job title is {job_title}.")
+# for i in range(num_employees):
+#     employee = employees[i]
+#     job_title = job_titles[i]
+#     print(f"{employee}'s job title is {job_title}.")
 
 
 '''
 Write some code that creates a range based on what the user enters. 
 Challenge: you can make a range with 1, 2, or 3 numbers. How would you allow the user to pick any of these options?
 '''
+# ASK USER TO CHOOSE PARAMETERS
+
+# while True:
+    # num_count = input("Enter the number of values for the range (1, 2, or 3): ")
+    # if num_count.isdigit() and int(num_count) in [1, 2, 3]:
+        # num_count = int(num_count)
+        # break  # EXIT THE LOOP IF INPUT IS VALID
+    # else:
+        # print("Invalid input. Please enter 1, 2, or 3 only.")
+
+# GET NUMBERS FROM USERS, BASED ON THEIR CHOICE
+
+# if num_count == 1:
+    # num1 = int(input("Enter the number for the range: "))
+    # my_range = range(num1, num1 + 1)
+# elif num_count == 2:
+    # num1 = int(input("Enter the first number for the range: "))
+    # num2 = int(input("Enter the second number for the range: "))
+    # my_range = range(num1, num2 + 1)
+# elif num_count == 3:
+    # num1 = int(input("Enter the start number for the range: "))
+    # num2 = int(input("Enter the end number for the range: "))
+    # num3 = int(input("Enter the step size for the range: "))
+    # my_range = range(num1, num2, num3)
+
+# PRINT THE GENERATED RANGE:
+
+# print("Generated range:", list(my_range))
