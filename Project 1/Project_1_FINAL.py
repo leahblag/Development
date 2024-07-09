@@ -102,8 +102,8 @@ while True:
 # TESTING PASSWORD & ENFORCING LOGIC:
     if not valid_password(password):
         print("Invalid password.")
-        for err in error_messages:
-            print(err)
+        for error in error_messages:
+            print(error)
         continue
     
 # If PASS IS VALID, BREAK LOOP:
