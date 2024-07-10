@@ -112,7 +112,7 @@ while True:
 '''LOGIN ATTEMPTS'''
 
 # IF PASSED, ASK USER TO LOGIN:
-print("Congratulations! Sign up successfully! Now, please log in.")
+print("Congratulations! Sign up successfull! Now, please log in.")
 
 # LOOP FOR LOGIN ATTEMPT:
 while True:
