@@ -112,26 +112,33 @@ states.remove('vermont')
 
 
 # Difference - What's different?
-# student_set = {'brad', 'dez', 'kenneth'}
-# student_set_2 = {'brad', 'dez', 'chelsea'}
+student_set = {'brad', 'dez', 'kenneth'}
+student_set_2 = {'brad', 'dez', 'chelsea'}
+result = student_set - student_set_2 # OPERATOR
+result = student_set.difference(student_set_2) # METHOD
+# print(result)
 
 
-# Intersect - What do we have in common?
-# my_schedule = {'mon', 'wed', 'thurs'}
-# pats_schedule = {'wed', 'fri', 'sat'}
+# Intersect - What do we have in common? '&'
+my_schedule = {'mon', 'wed', 'thurs'}
+pats_schedule = {'wed', 'fri', 'sat'}
+result = my_schedule & pats_schedule # USING 'OPERATOR'
+result = my_schedule.intersection(pats_schedule) # USING METHOD
 
 # Union - All pets that appear in any set
 joel_pets = {'dog', 'cat', 'bird'}
 mustafa_pets = {'chickens', 'dog', 'fish'}
 sarah_pets = {'bird', 'dog', 'fish'}
 leah_pets = {'turtle'}
-
+all_pets = joel_pets.union(mustafa_pets, sarah_pets, leah_pets) # USING METHOD
+# print(all_pets)
 
 # Symmetric difference - Items outside of matching items
-
 wendy_books = {'catcher in the rye', 'richest man in babylon'}
 cain_books = {'catcher in the rye', 'richest man in babylon', 'sounder'}
-
+books = wendy_books ^ cain_books  # USING OPERATOR
+books = wendy_books.symmetric_difference(cain_books) # USING METHOD
+# print(books)
 
 '''
 Exercise - Sets
@@ -144,9 +151,9 @@ Output: {'Dominic', 'Simone'}
 '''
 
 # solved with intersection - solve with 1 or 2 lines of code
-# over_60_years = {'Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf'}
-# over_5_purchases = {'Finn', 'Simone', 'Aaron', 'Dominic'}
-# customer_discount = over_60_years.intersection(over_5_purchases)
+over_60_years = {'Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf'}
+over_5_purchases = {'Finn', 'Simone', 'Aaron', 'Dominic'}
+customer_discount = over_60_years.intersection(over_5_purchases)
 # print(customer_discount)
 
 
@@ -160,3 +167,10 @@ The set of employees that know JavaScript, but not Python
 The set of employees that know Python or JavaScript, but not both
 '''
 
+# SETTING VARIABLES
+knows_py = set()
+knows_js = set()
+
+both_languages = knows_py & knows_js
+java_only = knows_js - knows_py
+not_both = 
