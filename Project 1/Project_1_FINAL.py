@@ -54,7 +54,6 @@ def valid_password(password):
         return False
     return True
 
- 
 '''USERNAME INFORMATION / REQUIRMENTS'''
 
 # START THE WHILE LOOP FOR USERNAME:
@@ -79,7 +78,6 @@ while True:
     
 # IF USER IS VALID, BREAK LOOP:
     break
-
 
 '''PASSWORD INFORMATION / REQUIRMENTS'''
 
