@@ -171,6 +171,42 @@ The set of employees that know Python or JavaScript, but not both
 knows_py = set()
 knows_js = set()
 
-both_languages = knows_py & knows_js
-java_only = knows_js - knows_py
-not_both = 
+# INPUTS
+dev_type_input, dev_name_input = " " , " "
+
+# MESSAGES
+msgs =  ('Invalid input, please try again', 'Thank you! Have a good day!', 'stopping program')
+invalid_input = msgs[0]
+have_a_nice_day = msgs[1]
+program_stop = msgs[2]
+
+while True:
+    
+    dev_type_input =input("Type 'p' for python and 'js' for javascript. OR 'stop' to exit.").casefold()
+    print(dev_type_input)
+
+# IF USER ENTERS STOP
+    if dev_type_input == 'stop':
+        print(invalid_input)
+        break
+
+    # GET A DEV NAME / OFFER EXIT
+    if dev_type_input == 'p' or dev_type_input == 'js':
+        dev_name_input = input("Please enter developer's name: ").casefold()
+    if dev_name_input == 'stop':
+        print(msgs[0])
+        break
+    elif dev_type_input == 'p':
+        knows_py.add(dev_name_input.title())
+        print(knows_py)
+    elif dev_type_input == 'js':
+        knows_js.add(dev_name_input.title())
+        print(knows_js)
+    else:
+        print(msgs[2])
+
+knows_both = knows_py.intersection(knows_js)
+knows_js_not_pyhton = knows_js.difference(knows_py)
+knows_js_or_python_not_both = knows_js.symmetric_difference(knows_py)
+print("Knows both: {knows_both}")
+print("Knows javascript: {knows_js}")
