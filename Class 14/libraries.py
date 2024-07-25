@@ -145,7 +145,7 @@ pdf_template = '''
 '''
  
  
-final_pdf = Template(pdf_template)
+final_pdf = template(pdf_template)
  
 # Formatted html for final output
 Func = open("name_and_color.html", "w")
