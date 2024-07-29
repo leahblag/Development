@@ -1,11 +1,23 @@
 
-# Functions Part 2
+# # Functions Part 2
 
-# With doc string and type hinting
+# # With doc string and type hinting
 
+# def my_function(country: str = "Norway") -> None:
+#     # FUNCTION RETURNS USERS COUNTRY
+#     print("I am from " + country)
 
+# my_function('Sweden', 5)
+# my_function('India', 5)
+# my_function()
+# my_function('Brazil', 4)
 
+# def test_function(name):
+#     return name
 
+# # test_function('Hello')
+# users_name = test_function('Joe')
+# # print(users_name)
 '''
 Exercise
 Write a function called center that returns either the mean or median of a list of numbers.
@@ -15,12 +27,23 @@ If use_median is True, return the median of the list.
 Test your function by calling it with different arguments.
 '''
 
-
-
+def center(numbers, use_median=False):
+  from statistics import mean, median
+    
+  if use_median:
+        return median(numbers)
+  else:
+        return mean(numbers)
 
 
 test_list1 = [1,2,2,2,3,4,5,6,7,8]
 test_list2 = [3,6,7,9,10,11,2]
+
+print("Mean of test_list1:", center(test_list1))          # Mean // ANSWER: 4
+print("Median of test_list1:", center(test_list1, True))  # Median // ANSWER: 3.5
+
+print("Mean of test_list2:", center(test_list2))          # Mean // ANSWER: 6.857142857142857
+print("Median of test_list2:", center(test_list2, True))  # Median // ANSWER: 7
 
 
 '''Documentation, type hinting, shorthand if-then-else'''
@@ -42,8 +65,18 @@ Mean: 3.4
 Median: 4
 Mode: 5
 '''
+import statistics
 
 my_list = [1,2,4,5,5]
+def get_stats(num_list):
+    mean = statistics.mean(num_list)
+    median = statistics.median(num_list)
+    mode = statistics.mode(num_list)
+    return mean, median, mode
+print(f"Mean: {get_stats(my_list)[0]}")
+print(f"Median: {get_stats(my_list)[1]}")
+print(f"Mode: {get_stats(my_list)[2]}")
+
 
 
 '''Global variables'''
