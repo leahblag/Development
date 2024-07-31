@@ -90,12 +90,20 @@ Syntax: lambda arguments : expression
 '''
 
 # Function to add two numbers
-
-
+def add_two(x, y):
+    return x + y
+ 
+# print(add_two(5, 10))
+ 
 # Written as a Lambda
-
-
-# Write the following functions as Lambdas
+lambda x, y: x + y
+ 
+# Assigning the lambda to a variable
+add_two_lambda = lambda x, y: x + y
+ 
+print(add_two_lambda(9, 15))
+ 
+print((add_two_lambda)(5,10))
 
 def greeting(fname):
     print(f'Hello, {fname}')
@@ -115,7 +123,8 @@ Write a function that computes the n-th power of a number, given two arguments, 
 Now, write a lambda that is equivalent to the lambda.
 '''
 # function
-
+def power(num, n):
+    return num ** n
 
 # lambda
 
