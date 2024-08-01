@@ -11,9 +11,10 @@ between 0 and 1 (exclusive). If either of them are outside of the valid range, r
  an appropriate error message. Now, test your implementation by asking the user to input a product price and
 sales tax rate, and call your function. Catch any potential ValueError raised by the function.
 '''
+# NOTE to self: THE COMMENTS IN CAPS-LOCK ARE DESCRIPTIVE LABELS
+# NOTE to self: The lowercase comments on the same line describe the action taken by that line of code.
+
 # MY WORK:
-# NOTE: THE COMMENTS IN CAPS LOCK ARE SECTION HEADINGS OR DESCRIPTIVE LABELS,
-# NOTE: while the lowercase comments on the same line describe the action taken by that line of code.
 
 # DEFINE A FUNCTION TO CALCULATE FINAL PRICE INCLUDING TAX:
 def calculate_final_price(price, tax_rate):
@@ -21,13 +22,13 @@ def calculate_final_price(price, tax_rate):
     # CHECK IF PRICE IS A POSITIVE NUMBER:
     if price <= 0:  # ensures the price is greater than zero.
 
-        # RAISE A CUSTOM VALUEERROR IF PRICE IS NOT POSITIVE:
+        # RAISE A CUSTOM VALUE-ERROR IF PRICE IS NOT POSITIVE:
         raise ValueError("The price should be a positive number.")  # raises an error if the price is not positive.
     
     # CHECK IF TAX RATE IS BETWEEN 0 AND 1 (EXCLUSIVE):
     if not (0 < tax_rate < 1):  # ensures the tax rate is within the valid range.
 
-        # RAISE A CUSTOM VALUEERROR IF TAX RATE IS OUTSIDE OF VALID RANGE:
+        # RAISE A CUSTOM VALUE-ERROR IF TAX RATE IS OUTSIDE OF VALID RANGE:
         raise ValueError("The tax rate should be between 0 and 1 (exclusive).")  # raises an error if the tax rate is not between 0 and 1.
     
     # CALCULATE FINAL PRICE INCLUDING TAX:
