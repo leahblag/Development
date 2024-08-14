@@ -41,7 +41,46 @@ from module import BankAccount
 class BankAccount():
 # THIS DOCSTRING WILL SHOW ALL OF THE DOCUMENTATION FOR THE CLASS - BankAccount
 
+# YOUR INIT, AKA INSTRUCTOR, BUILDS THE OBJECT
     def __init__(self, owner: str, transactions: list, balance: float):
         self.owner = owner
         self.transactions = transactions
         self.balance = balance
+
+# CONTROLS WHAT THE USER SEES WHEN THEY USE PRINT
+    def __str__(self):
+        return f'Account Owners Name: {self.owner}\nInitial Deposit: {self.balance}'
+
+# DEPOSIT(AMOUNT, DATE): ADDS THE SPECIFIED AMOUNT TO THE ACCOUNT'S BALANCE AND RECORDS THE TRANSACTION IN THE TRANSACTION LIST
+    def deposit(self, dep_amt, date):
+        dep_tran = {'type':'deposit', 'amount':dep_amt, 'transaction date': date}
+        self.transactions.append(dep_tran)
+        print(self.transactions)
+
+# WITHDRAW(AMOUNT): SUBTRACTS THE SPECIFIED AMOUNT FROM THE ACCOUNT'S BALANCE (IF THERE ARE SUFFICIENT FUNDS) & RECORDS THE TRANSACTION IN THE TRANSACTION LIST
+def withdrawl(self, withd_amt, date):
+        sufficient_funds = self.balance - withd_amt
+        if sufficient_funds < 0:
+            print(f'Transaction cancelled, Insufficient balance {sufficient_funds}')
+        else:
+             withd_tran = {'type': 'withdrawal', 'amount':withd_amt, 'transaction date':date}
+             self.transactions.append(withd_tran)
+             print(self.transactions)
+
+# RETURNS THE CURRENT BALANCE OF THE ACCOUNT - get_balance(): 
+def get_balance(self):
+     tot_dep = 0
+     tot_with = 0
+     for t in self.transactions:
+          if t['type'] == 'deposit':
+               tot_dep += t['amount']
+          if t ['type'] == 'withdrawal':
+               tot_with -= t['amount']
+     print(f'Your balance is {(self.balance + tot_dep) + tot_with}')       
+
+
+def get_transactions(self):
+     print(f'{self.transactions}')
+
+               
+                  
